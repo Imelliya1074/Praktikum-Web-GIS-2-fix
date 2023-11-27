@@ -88,9 +88,7 @@
                     <tr>\
                         <td colspan="2"><strong>Foto</strong><br />' + (feature.properties['Foto'] !== null ? '<img src="images/' + String(feature.properties['Foto']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>Gambar</strong><br />' + (feature.properties['Gambar'] !== null ? '<img src="images/' + String(feature.properties['Gambar']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
+
                     <tr>\
                         <td colspan="2"><strong>QS WUR</strong><br />' + (feature.properties['Desc_QS WUR'] !== null ? autolinker.link(feature.properties['Desc_QS WUR'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -98,7 +96,7 @@
                         <td colspan="2"><strong>Didirikan</strong><br />' + (feature.properties['Desc_Didirikan'] !== null ? autolinker.link(feature.properties['Desc_Didirikan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Fakultas</strong><br />' + (feature.properties['Desc_Fakultas'] !== null ? autolinker.link(feature.properties['Desc_Fakultas'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Gambar</strong><br />' + (feature.properties['Gambar'] !== null ? '<img src="images/' + String(feature.properties['Gambar']).replace(/[\\\/:]/g, '_').trim() + '"+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
